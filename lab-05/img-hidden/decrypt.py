@@ -16,7 +16,7 @@ def decode_image(encoded_image_path):
     message = ""
     for i in range(0, len(binary_message), 8):
         char = chr(int(binary_message[i:i+8], 2))
-        if char == '\0':
+        if char == '\0':  # Kết thúc thông điệp khi gặp dấu '\0'
             break
         message += char
 
@@ -24,7 +24,7 @@ def decode_image(encoded_image_path):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python decrypt.py <encoded_image_path>")
+        print("Usage: python decrypt.py encoded_image_path")
         return
 
     encoded_image_path = sys.argv[1]

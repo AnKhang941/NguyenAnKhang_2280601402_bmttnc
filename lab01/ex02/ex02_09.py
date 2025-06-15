@@ -7,7 +7,7 @@ def kiem_tra_so_nguyen_to(n):
     return True
 number= int(input("Nhập vào số cần kiểm tra: "))
 if kiem_tra_so_nguyen_to(number):
-    print(number, "là số nguyên tố: ")
+    print(number, "là số nguyên tố.")
     
 else:
-    print(number, "không là số nguyên tố: ")
+    print(number, "không là số nguyên tố.")
